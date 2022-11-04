@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DbBashgahModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="frosh">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OzveCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OzvName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="kalaname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PriceKala" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="tedadkala" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Datatarakonesh" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tarakoneshTBl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tarakoneshdate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TarakoneshKind" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CustomerID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBkomod">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KomodNum" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Customer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tblfrooshgah">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KalaName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mujodi" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BirthDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="OzviatDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EtebarDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Komod" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DbBashgahModelStoreContainer">
+          <EntitySet Name="frosh" EntityType="Self.frosh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tarakoneshTBl" EntityType="Self.tarakoneshTBl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBkomod" EntityType="Self.TBkomod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tblfrooshgah" EntityType="Self.Tblfrooshgah" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblUser" EntityType="Self.TblUser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DbBashgahModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tarakoneshTBl">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tarakoneshdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TarakoneshKind" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TBkomod">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KomodNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tblfrooshgah">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KalaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mujodi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BirthDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OzviatDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EtebarDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Komod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DbBashgahEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tarakoneshTBls" EntityType="Self.tarakoneshTBl" />
+          <EntitySet Name="TBkomods" EntityType="Self.TBkomod" />
+          <EntitySet Name="Tblfrooshgahs" EntityType="Self.Tblfrooshgah" />
+          <EntitySet Name="TblUsers" EntityType="Self.TblUser" />
+          <EntitySet Name="froshes" EntityType="DbBashgahModel.frosh" />
+        </EntityContainer>
+        <EntityType Name="frosh">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OzveCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OzvName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kalaname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PriceKala" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tedadkala" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Datatarakonesh" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DbBashgahModelStoreContainer" CdmEntityContainer="DbBashgahEntities">
+          <EntitySetMapping Name="tarakoneshTBls">
+            <EntityTypeMapping TypeName="DbBashgahModel.tarakoneshTBl">
+              <MappingFragment StoreEntitySet="tarakoneshTBl">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Tarakoneshdate" ColumnName="Tarakoneshdate" />
+                <ScalarProperty Name="TarakoneshKind" ColumnName="TarakoneshKind" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBkomods">
+            <EntityTypeMapping TypeName="DbBashgahModel.TBkomod">
+              <MappingFragment StoreEntitySet="TBkomod">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KomodNum" ColumnName="KomodNum" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tblfrooshgahs">
+            <EntityTypeMapping TypeName="DbBashgahModel.Tblfrooshgah">
+              <MappingFragment StoreEntitySet="Tblfrooshgah">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="KalaName" ColumnName="KalaName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Mujodi" ColumnName="Mujodi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUsers">
+            <EntityTypeMapping TypeName="DbBashgahModel.TblUser">
+              <MappingFragment StoreEntitySet="TblUser">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="OzviatDate" ColumnName="OzviatDate" />
+                <ScalarProperty Name="EtebarDate" ColumnName="EtebarDate" />
+                <ScalarProperty Name="Komod" ColumnName="Komod" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="froshes">
+            <EntityTypeMapping TypeName="DbBashgahModel.frosh">
+              <MappingFragment StoreEntitySet="frosh">
+                <ScalarProperty Name="Datatarakonesh" ColumnName="Datatarakonesh" />
+                <ScalarProperty Name="tedadkala" ColumnName="tedadkala" />
+                <ScalarProperty Name="PriceKala" ColumnName="PriceKala" />
+                <ScalarProperty Name="kalaname" ColumnName="kalaname" />
+                <ScalarProperty Name="OzvName" ColumnName="OzvName" />
+                <ScalarProperty Name="OzveCode" ColumnName="OzveCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

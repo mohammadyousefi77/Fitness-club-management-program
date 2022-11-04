@@ -1,0 +1,3 @@
+To install the program, SQL Server must be installed
+After installation, a new SQL database must be created with the same name as the existing database in the SQL folder
+, and a query from the database must be executed with the project in SQL.

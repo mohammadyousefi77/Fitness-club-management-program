@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1645554-70E8-4702-89E8-F98439491896}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bashgah</RootNamespace>
+    <AssemblyName>bashgah</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>990.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E84FBC469061033929F055E094BE3769EB9282C7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>bashgah_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2018.1.6.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a" />
+    <Reference Include="Stimulsoft.Controls.Win, Version=2018.1.6.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Reports 2018.1.6\Libs\Net\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2018.1.6.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL" />
+    <Reference Include="Stimulsoft.Report.Win, Version=2018.1.6.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Stimulsoft Reports 2018.1.6\Libs\Net\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarCodeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmaboutprogram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmaboutprogram.Designer.cs">
+      <DependentUpon>Frmaboutprogram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetails.Designer.cs">
+      <DependentUpon>FrmDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFrooshgah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFrooshgah.Designer.cs">
+      <DependentUpon>FrmFrooshgah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmmodiriatfroosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmmodiriatfroosh.Designer.cs">
+      <DependentUpon>Frmmodiriatfroosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmmodiriatKomod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmmodiriatKomod.Designer.cs">
+      <DependentUpon>FrmmodiriatKomod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmsabtenam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmsabtenam.Designer.cs">
+      <DependentUpon>Frmsabtenam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmsavabegh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmsavabegh.Designer.cs">
+      <DependentUpon>Frmsavabegh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmselectcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmselectcustomer.Designer.cs">
+      <DependentUpon>Frmselectcustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTamdid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTamdid.Designer.cs">
+      <DependentUpon>FrmTamdid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmuseredite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmuseredite.Designer.cs">
+      <DependentUpon>Frmuseredite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserManagement.Designer.cs">
+      <DependentUpon>FrmUserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_frosh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_frosh.Designer.cs">
+      <DependentUpon>Frm_frosh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frosh.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tarakoneshTBl.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBkomod.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tblfrooshgah.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TblUser.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ّFrmsaystate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ّFrmsaystate.Designer.cs">
+      <DependentUpon>ّFrmsaystate.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmaboutprogram.resx">
+      <DependentUpon>Frmaboutprogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetails.resx">
+      <DependentUpon>FrmDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFrooshgah.resx">
+      <DependentUpon>FrmFrooshgah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmmodiriatfroosh.resx">
+      <DependentUpon>Frmmodiriatfroosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmmodiriatKomod.resx">
+      <DependentUpon>FrmmodiriatKomod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmsabtenam.resx">
+      <DependentUpon>Frmsabtenam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmsavabegh.resx">
+      <DependentUpon>Frmsavabegh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmselectcustomer.resx">
+      <DependentUpon>Frmselectcustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTamdid.resx">
+      <DependentUpon>FrmTamdid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmuseredite.resx">
+      <DependentUpon>Frmuseredite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserManagement.resx">
+      <DependentUpon>FrmUserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_frosh.resx">
+      <DependentUpon>Frm_frosh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ّFrmsaystate.resx">
+      <DependentUpon>ّFrmsaystate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="bashgah_TemporaryKey.pfx" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Recycle Bin Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Recycle Bin Full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0036.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0225.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0269.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0455.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0457.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0615.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1047.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1052.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1075.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1077.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1215.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1249.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1476.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1483.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7748.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7856.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7931.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-contact-new-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-print-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-find-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-list-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-list-add-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-list-remove-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-event-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Error-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Help-and-Support-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm-Tick-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-contact-list-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business-Expired-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash-register-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coffee-Shop-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-help-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-scroll-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Male-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elan Icon 15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elan Icon 18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elan Icon 20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FAQ-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-Add-List-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-Edit-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter-List-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe-Vista-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glossy-3d-blue-hourglass-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icardres_dll_10_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_dll_007_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_dll_168_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_dll_193_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageres_dll_207_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\irprops_cpl_01_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyring_dll_04_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LXP_Everest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-wallet-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSOERES_dll_01_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My Computer Vista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notepad2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Office-Customer-Male-Light-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnLineIDCpl_dll_02_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-trash-full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recycle-Bin-Full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-b-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEO-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-cart-apply-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-cart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-bag-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\srchadmin_dll_01_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sysmain_dll_01_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemcpl_dll_01_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Files-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-Add-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-Edit-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vista Notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab_exe_05_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab_exe_08_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab_exe_09_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab_exe_10_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab32_dll_01_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab32res_dll_01_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wab32res_dll_10_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows-Live-Gallery-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\workstation-locked-Vista-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wsecedit_dll_05_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wucltux_dll_10_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+    <None Include="Resources\images.png" />
+    <None Include="bin\Debug\Pics\images.png" />
+    <Content Include="990.ico" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\04571.png" />
+    <None Include="Resources\11.jpg" />
+    <Content Include="Resources\4444.png" />
+    <None Include="Resources\Actions-list-add-user-icon2.png" />
+    <None Include="Resources\44441.png" />
+    <Content Include="Resources\555.png" />
+    <None Include="Resources\5551.png" />
+    <None Include="Resources\wucltux_dll_10_091.png" />
+    <None Include="Resources\wsecedit_dll_05_131.png" />
+    <None Include="Resources\workstation-locked-Vista-icon1.png" />
+    <None Include="Resources\Windows-Live-Gallery-icon1.png" />
+    <None Include="Resources\wab32res_dll_10_131.png" />
+    <None Include="Resources\wab32res_dll_01_131.png" />
+    <None Include="Resources\wab32_dll_01_221.png" />
+    <None Include="Resources\wab_exe_10_131.png" />
+    <None Include="Resources\wab_exe_09_131.png" />
+    <None Include="Resources\wab_exe_08_131.png" />
+    <None Include="Resources\wab_exe_05_131.png" />
+    <None Include="Resources\Vista Notepad1.png" />
+    <None Include="Resources\Users-icon1.png" />
+    <None Include="Resources\Users-Edit-User-icon1.png" />
+    <None Include="Resources\Users-Add-User-icon1.png" />
+    <None Include="Resources\User-Files-icon1.png" />
+    <None Include="Resources\trash-icon1.png" />
+    <None Include="Resources\systemcpl_dll_01_141.png" />
+    <None Include="Resources\sysmain_dll_01_101.png" />
+    <None Include="Resources\srchadmin_dll_01_131.png" />
+    <None Include="Resources\shopping-icon1.png" />
+    <None Include="Resources\shopping-bag-icon1.png" />
+    <None Include="Resources\shop-cart-icon1.png" />
+    <None Include="Resources\shop-cart-apply-icon1.png" />
+    <None Include="Resources\SEO-icon1.png" />
+    <None Include="Resources\Search-icon1.png" />
+    <None Include="Resources\search-b-icon1.png" />
+    <None Include="Resources\Search1.png" />
+    <None Include="Resources\Refresh-icon1.png" />
+    <None Include="Resources\Recycle-Bin-Full-icon1.png" />
+    <None Include="Resources\printer-icon1.png" />
+    <None Include="Resources\Places-trash-full-icon1.png" />
+    <None Include="Resources\payment-icon1.png" />
+    <None Include="Resources\OnLineIDCpl_dll_02_131.png" />
+    <None Include="Resources\Office-Customer-Male-Light-icon1.png" />
+    <None Include="Resources\Notepad21.png" />
+    <None Include="Resources\My Computer Vista1.png" />
+    <None Include="Resources\MSOERES_dll_01_221.png" />
+    <None Include="Resources\money-wallet-icon1.png" />
+    <None Include="Resources\LXP_Everest1.png" />
+    <None Include="Resources\keyring_dll_04_101.png" />
+    <None Include="Resources\irprops_cpl_01_131.png" />
+    <None Include="Resources\imageres_dll_207_181.png" />
+    <None Include="Resources\imageres_dll_193_181.png" />
+    <None Include="Resources\imageres_dll_168_131.png" />
+    <None Include="Resources\imageres_dll_007_101.png" />
+    <None Include="Resources\icardres_dll_10_131.png" />
+    <None Include="Resources\glossy-3d-blue-hourglass-icon1.png" />
+    <None Include="Resources\globe-Vista-icon1.png" />
+    <None Include="Resources\Filter-List-icon1.png" />
+    <None Include="Resources\Files-Edit-file-icon1.png" />
+    <None Include="Resources\Files-Add-List-icon1.png" />
+    <None Include="Resources\FAQ-icon1.png" />
+    <None Include="Resources\Elan Icon 201.png" />
+    <None Include="Resources\Elan Icon 181.png" />
+    <None Include="Resources\Elan Icon 151.png" />
+    <None Include="Resources\Edit-Male-User-icon1.png" />
+    <None Include="Resources\edit-icon1.png" />
+    <None Include="Resources\document-scroll-icon1.png" />
+    <None Include="Resources\document-help-icon1.png" />
+    <None Include="Resources\Delete-user-icon1.png" />
+    <None Include="Resources\Control Panel1.png" />
+    <None Include="Resources\Comment-add-icon1.png" />
+    <None Include="Resources\coin-add-icon1.png" />
+    <None Include="Resources\Coffee-Shop-icon1.png" />
+    <None Include="Resources\checklist-icon1.png" />
+    <None Include="Resources\Cash-register-icon1.png" />
+    <None Include="Resources\Calendar-icon1.png" />
+    <None Include="Resources\Business-Expired-icon1.png" />
+    <None Include="Resources\Bookmark-add-icon1.png" />
+    <None Include="Resources\Apps-preferences-contact-list-icon1.png" />
+    <None Include="Resources\Alarm-Tick-icon1.png" />
+    <None Include="Resources\Alarm-Help-and-Support-icon1.png" />
+    <None Include="Resources\Alarm-Error-icon1.png" />
+    <None Include="Resources\administrator-icon1.png" />
+    <None Include="Resources\admin-icon1.png" />
+    <None Include="Resources\add-event-icon1.png" />
+    <None Include="Resources\Actions-list-remove-user-icon1.png" />
+    <None Include="Resources\Actions-list-add-user-icon1.png" />
+    <None Include="Resources\Actions-list-add-icon1.png" />
+    <None Include="Resources\Actions-edit-find-user-icon1.png" />
+    <None Include="Resources\Actions-document-print-icon1.png" />
+    <None Include="Resources\Actions-document-edit-icon1.png" />
+    <None Include="Resources\Actions-contact-new-icon1.png" />
+    <None Include="Resources\79311.png" />
+    <None Include="Resources\78561.png" />
+    <None Include="Resources\78511.png" />
+    <None Include="Resources\77481.png" />
+    <None Include="Resources\14831.png" />
+    <None Include="Resources\14761.png" />
+    <None Include="Resources\12491.png" />
+    <None Include="Resources\12151.png" />
+    <None Include="Resources\11471.png" />
+    <None Include="Resources\11191.png" />
+    <None Include="Resources\11121.png" />
+    <None Include="Resources\10771.png" />
+    <None Include="Resources\10751.png" />
+    <None Include="Resources\10521.png" />
+    <None Include="Resources\10471.png" />
+    <None Include="Resources\06151.png" />
+    <None Include="Resources\04572.png" />
+    <None Include="Resources\04551.png" />
+    <None Include="Resources\02691.png" />
+    <None Include="Resources\02251.png" />
+    <None Include="Resources\01251.png" />
+    <None Include="Resources\00361.png" />
+    <None Include="Resources\00241.png" />
+    <None Include="Resources\2Recycle Bin Full1.png" />
+    <None Include="Resources\2Recycle Bin Empty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

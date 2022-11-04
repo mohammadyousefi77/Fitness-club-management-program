@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbBashgahModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="frosh">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OzveCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OzvName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="kalaname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PriceKala" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tedadkala" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Datatarakonesh" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tarakoneshTBl">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tarakoneshdate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TarakoneshKind" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBkomod">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KomodNum" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Customer" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tblfrooshgah">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KalaName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mujodi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="OzviatDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EtebarDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Komod" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DbBashgahModelStoreContainer">
+    <EntitySet Name="frosh" EntityType="Self.frosh" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tarakoneshTBl" EntityType="Self.tarakoneshTBl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBkomod" EntityType="Self.TBkomod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tblfrooshgah" EntityType="Self.Tblfrooshgah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUser" EntityType="Self.TblUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

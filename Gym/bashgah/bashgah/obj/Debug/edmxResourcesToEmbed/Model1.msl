@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbBashgahModelStoreContainer" CdmEntityContainer="DbBashgahEntities">
+    <EntitySetMapping Name="tarakoneshTBls">
+      <EntityTypeMapping TypeName="DbBashgahModel.tarakoneshTBl">
+        <MappingFragment StoreEntitySet="tarakoneshTBl">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Tarakoneshdate" ColumnName="Tarakoneshdate" />
+          <ScalarProperty Name="TarakoneshKind" ColumnName="TarakoneshKind" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBkomods">
+      <EntityTypeMapping TypeName="DbBashgahModel.TBkomod">
+        <MappingFragment StoreEntitySet="TBkomod">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KomodNum" ColumnName="KomodNum" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tblfrooshgahs">
+      <EntityTypeMapping TypeName="DbBashgahModel.Tblfrooshgah">
+        <MappingFragment StoreEntitySet="Tblfrooshgah">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KalaName" ColumnName="KalaName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Mujodi" ColumnName="Mujodi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUsers">
+      <EntityTypeMapping TypeName="DbBashgahModel.TblUser">
+        <MappingFragment StoreEntitySet="TblUser">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="OzviatDate" ColumnName="OzviatDate" />
+          <ScalarProperty Name="EtebarDate" ColumnName="EtebarDate" />
+          <ScalarProperty Name="Komod" ColumnName="Komod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="froshes">
+      <EntityTypeMapping TypeName="DbBashgahModel.frosh">
+        <MappingFragment StoreEntitySet="frosh">
+          <ScalarProperty Name="Datatarakonesh" ColumnName="Datatarakonesh" />
+          <ScalarProperty Name="tedadkala" ColumnName="tedadkala" />
+          <ScalarProperty Name="PriceKala" ColumnName="PriceKala" />
+          <ScalarProperty Name="kalaname" ColumnName="kalaname" />
+          <ScalarProperty Name="OzvName" ColumnName="OzvName" />
+          <ScalarProperty Name="OzveCode" ColumnName="OzveCode" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
